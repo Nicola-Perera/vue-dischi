@@ -3,6 +3,7 @@
     <div>
       <CardLayout
       v-for='song in response'
+      class='card brend_light_grey'
       :poster="song.poster"
       :title="song.title"
       :author="song.author"

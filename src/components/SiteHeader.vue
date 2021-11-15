@@ -1,5 +1,5 @@
 <template>
-    <div id='SiteHeader'>
+    <div id='SiteHeader' class="brend_light_grey">
         <img src='../assets/Spotify_logo_without_text.svg' alt=''>
     </div>
 </template>
@@ -13,7 +13,6 @@ export default {
 
 <style lang="scss">
    #SiteHeader {
-       background-color: #2E3A46;
        padding: 1rem;
        img {
            width: 5%;

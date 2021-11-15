@@ -26,5 +26,14 @@ export default {
         padding: 0;
     }
 #app {
+  .brend_light_grey {
+    background-color: #2E3A46;
+  }
+  #SiteMain {
+    background-color: #1E2D3B;
+    .card {
+      margin: 1rem 0;
+    }
+  }
 }
 </style>
