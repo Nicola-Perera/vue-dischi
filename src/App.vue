@@ -33,6 +33,23 @@ export default {
     background-color: #1E2D3B;
     .card {
       margin: 1rem 0;
+      width: calc(100% / 7);
+      text-align: center;
+      padding: 1rem;
+      .poster {
+        width: 100%;
+        margin: auto;
+        img {
+         width: 100%;
+        }
+      }
+      h2 {
+        color: white;
+        margin: .5rem 0;
+      }
+      h3 {
+        color: #808080;
+      }
     }
   }
 }
