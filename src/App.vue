@@ -31,7 +31,6 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    justify-content: space-around;
   }
 
   // header & cards color
@@ -39,14 +38,15 @@ export default {
     background-color: #2E3A46;
   }
   #SiteMain {
+    padding: 0 10px;
 
     // library color
     background-color: #1E2D3B;
 
     // single card settings
     .card {
-      margin: .6rem .5rem;
-      width: calc(100% / 7);
+      margin: 10px;
+      width: calc((100% / 6) - 20px);
       text-align: center;
       padding: 1rem;
 
@@ -62,7 +62,7 @@ export default {
       // song title
       h2 {
         color: white;
-        margin: .5rem 0;
+        margin: 1rem 0;
       }
 
       // song author and year
