@@ -19,6 +19,12 @@ export default {
 </script>
 
 <style lang="scss">
+// reset rules
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 #app {
 }
 </style>
