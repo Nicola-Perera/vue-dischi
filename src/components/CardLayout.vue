@@ -14,6 +14,12 @@
 
 export default {
     name: 'CardLayout',
+    props: {
+        poster: String,
+        title: String,
+        author: String,
+        year: String,
+    }
 }
 </script>
 
