@@ -26,16 +26,30 @@ export default {
         padding: 0;
     }
 #app {
+  .songs_library {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+  }
+
+  // header & cards color
   .brend_light_grey {
     background-color: #2E3A46;
   }
   #SiteMain {
+
+    // library color
     background-color: #1E2D3B;
+
+    // single card settings
     .card {
-      margin: 1rem 0;
+      margin: 1rem .5rem;
       width: calc(100% / 7);
       text-align: center;
       padding: 1rem;
+
+      // song cover
       .poster {
         width: 100%;
         margin: auto;
@@ -43,10 +57,14 @@ export default {
          width: 100%;
         }
       }
+
+      // song title
       h2 {
         color: white;
         margin: .5rem 0;
       }
+
+      // song author and year
       h3 {
         color: #808080;
       }

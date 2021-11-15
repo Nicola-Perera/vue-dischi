@@ -1,6 +1,6 @@
 <template>
   <div id='SiteMain'>
-    <div>
+    <div class="songs_library">
       <CardLayout
       v-for='song in response'
       class='card brend_light_grey'
