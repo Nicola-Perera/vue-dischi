@@ -27,6 +27,7 @@ export default {
     }
 #app {
   .songs_library {
+    padding: 3rem 0 20rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -44,7 +45,7 @@ export default {
 
     // single card settings
     .card {
-      margin: 1rem .5rem;
+      margin: .6rem .5rem;
       width: calc(100% / 7);
       text-align: center;
       padding: 1rem;
