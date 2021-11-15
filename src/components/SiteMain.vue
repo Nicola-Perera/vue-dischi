@@ -1,20 +1,25 @@
 <template>
   <div id='SiteMain'>
-    <div
-      class='tracks_library'
+    <div>
+      <CardLayout
       v-for='song in response'
+      :poster="song.poster"
+      :title="song.title"
+      :author="song.author"
+      :year="song.year"
       :key='song.title'
-    ></div>
+      />
+    </div>
   </div>
 </template>
 
 <script>
-// import CardLayout from './components/CardLayout.vue';
+import CardLayout from './CardLayout.vue';
 
 export default {
   name: 'SiteMain',
   components: {
-    //   CardLayout,
+    CardLayout,
   },
   data() {
     return {
