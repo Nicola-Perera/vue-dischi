@@ -1,6 +1,6 @@
 <template>
   <div id="SiteMain">
-    <filterBox @search-genre='search'/>
+    <filterBox @search-genre='search' :songs='songs'/>
     <div class="songs_library" v-if="!loading">
       <CardLayout
         v-for="song in songs"
