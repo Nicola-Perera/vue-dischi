@@ -3,7 +3,7 @@
     <filterBox @search-genre='search' :songs='songs'/>
     <div class="songs_library" v-if="!loading">
       <CardLayout
-        v-for="song in songs"
+        v-for="song in getGenreFilter"
         class="card brend_light_grey"
         :poster="song.poster"
         :title="song.title"
@@ -36,6 +36,7 @@ export default {
       songs: [],
       loading: true,
       error: '',
+      searchGenre: '',
     };
   },
 
@@ -43,7 +44,6 @@ export default {
     axios
       .get('https://flynn.boolean.careers/exercises/api/array/music')
       .then((Response) => {
-        console.log(Response.data);
         this.songs = Response.data.response;
         this.loading = false;
       })
@@ -53,16 +53,18 @@ export default {
       });
   },
   methods: {
-    filteredGenre(text) {
+    search(text) {
       this.searchGenre = text;
     },
   },
   computed: {
     getGenreFilter() {
       if (this.searchGenre === 'all') {
+        console.log(this.songs);
         return this.songs;
       }
       const filtered = this.songs.filter((song) => song.genre.includes(this.searchGenre));
+      console.log(filtered);
       return filtered;
     },
   },
