@@ -1,6 +1,6 @@
 <template>
     <div id='SiteHeader' class="brend_light_grey">
-        <img src='../assets/Spotify_logo_without_text.svg' alt=''>
+        <img src='../assets/Spotify_logo_without_text.svg' alt='spotify logo'>
     </div>
 </template>
 

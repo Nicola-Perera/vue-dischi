@@ -1,5 +1,6 @@
 <template>
   <div id="CardLayout">
+    <filterBox />
     <div class="poster">
       <img :src="poster" alt="" />
     </div>
@@ -11,8 +12,13 @@
 </template>
 
 <script>
+import filterBox from './Filter.vue';
+
 export default {
   name: 'CardLayout',
+  components: {
+    filterBox,
+  },
   props: {
     poster: String,
     title: String,
