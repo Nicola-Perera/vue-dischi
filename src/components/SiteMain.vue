@@ -64,7 +64,6 @@ export default {
         return this.songs;
       }
       const filtered = this.songs.filter((song) => song.genre.includes(this.searchGenre));
-      console.log(filtered);
       return filtered;
     },
   },
