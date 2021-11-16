@@ -1,5 +1,6 @@
 <template>
   <div id="SiteMain">
+    <filterBox @search-genre='search'/>
     <div class="songs_library" v-if="!loading">
       <CardLayout
         v-for="song in songs"
@@ -22,11 +23,13 @@
 <script>
 import axios from 'axios';
 import CardLayout from './CardLayout.vue';
+import filterBox from './Filter.vue';
 
 export default {
   name: 'SiteMain',
   components: {
     CardLayout,
+    filterBox,
   },
   data() {
     return {
@@ -48,6 +51,20 @@ export default {
         console.log(Error, 'ERRORE!');
         this.error = `ERRORE ${Error}`;
       });
+  },
+  methods: {
+    filteredGenre(text) {
+      this.searchGenre = text;
+    },
+  },
+  computed: {
+    getGenreFilter() {
+      if (this.searchGenre === 'all') {
+        return this.songs;
+      }
+      const filtered = this.songs.filter((song) => song.genre.includes(this.searchGenre));
+      return filtered;
+    },
   },
 };
 </script>
